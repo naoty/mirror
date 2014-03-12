@@ -1,0 +1,13 @@
+.row
+  .col-xs-12
+    .signin-form
+      h2 ログイン
+      a.btn.btn-primary.btn-block.btn-lg href="/oauth" Google認証ページ
+
+- if signed_in?
+  .row
+    .col-xs-12
+      .signin-form
+        h2 API
+        form action="/cards" method="POST"
+          button.btn.btn-primary.btn-block.btn-lg カード挿入

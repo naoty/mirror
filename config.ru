@@ -1,2 +1,2 @@
-require "sinatra"
-run Sinatra::Application
+require "./mirror"
+run Mirror::Application

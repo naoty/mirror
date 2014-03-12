@@ -1,0 +1,3 @@
+config/secrets.json
+config/database.yml
+db/*.sqlite3
