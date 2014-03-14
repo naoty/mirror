@@ -2,7 +2,7 @@ module Mirror
   class Card
     def initialize(attrs = {})
       @text = attrs[:text]
-      @speakable_text = attrs[:speakable_text]
+      @speakableText = attrs[:speakableText] || attrs[:speakable_text]
       @notification = attrs[:notification]
       @menuItems = attrs[:menuItems] || attrs[:menu_items]
     end

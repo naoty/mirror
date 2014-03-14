@@ -1,5 +1,5 @@
 module Mirror
-  module ApplicationHelper
+  module SessionsHelper
     def sign_in(user)
       remember_token = User.new_remember_token
       session[:remember_token] = remember_token

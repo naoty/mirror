@@ -1,13 +1,15 @@
 .row
-  .col-xs-12
-    .signin-form
-      h2 ログイン
-      a.btn.btn-primary.btn-block.btn-lg href="/oauth" Google認証ページ
+  .col-xs-offset-2.col-xs-6
+    h1.page-header Mirror API Sample
+    - if signed_in?
+      ul
+        li
+          a href="/cards/new" タイムラインにカードを追加する
+        li
+          a href="/signout" サインアウト
+    - else
+      .well
+        p
+          | ご利用いただくにはGoogleアカウントでOAuth認証を行う必要があります。
+        a.btn.btn-primary role="button" href="/oauth" OAuth認証
 
-- if signed_in?
-  .row
-    .col-xs-12
-      .signin-form
-        h2 API
-        form action="/cards" method="POST"
-          button.btn.btn-primary.btn-block.btn-lg カード挿入

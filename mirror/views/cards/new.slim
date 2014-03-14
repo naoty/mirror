@@ -1,0 +1,26 @@
+.row
+  .col-xs-offset-2.col-xs-6
+    h2.page-header タイムラインにカードを追加する
+    form.form action="/cards" method="POST" role="form"
+      .form-group
+        label.control-label for="card_text" テキスト
+        textarea#card_text.form-control name="card[text]" rows="1"
+      .form-group
+        label.control-label for="card_speakable_text" 読み上げるテキスト
+        textarea#card_speakable_text.form-control name="card[speakable_text]" rows="1"
+      .form-group
+        label.control-label メニュー
+        div
+          label.checkbox-inline
+            input type="checkbox" name="card[menu_items][][action]" value="reply" REPLY
+          label.checkbox-inline
+            input type="checkbox" name="card[menu_items][][action]" value="reply_all" REPLY ALL
+          label.checkbox-inline
+            input type="checkbox" name="card[menu_items][][action]" value="delete" DELETE
+          label.checkbox-inline
+            input type="checkbox" name="card[menu_items][][action]" value="share" SHARE
+          label.checkbox-inline
+            input type="checkbox" name="card[menu_items][][action]" value="read_aloud" READ ALOUD
+      .form-group
+        input.btn.btn-primary type="submit" value="追加"
+        a.btn.btn-link href="/" キャンセル
